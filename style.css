@@ -1,0 +1,553 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+
+.fade-in-element {
+    opacity: 0;
+}
+
+.header-content h2, .header-content h1 {
+    animation: fadeIn 1s ease-out forwards; 
+    opacity: 0; 
+}
+.header-content h2 {
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+.header-content h1 {
+    animation: fadeIn 2s ease-out 0.5s forwards; 
+    opacity: 0;
+}
+
+header{
+    background-image: url('background.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-content{
+    text-align:center;
+}
+.header-content h2 {
+    font-size: 2.5em;
+    color: whitesmoke;
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+
+
+.line{
+    width: 40%;
+    height: 4px;
+    background: whitesmoke;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1 {
+    font-size: 3.5em;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: rgb(255, 253, 253);
+    animation: fadeIn 2s ease-out 0.5s forwards; 
+    opacity: 0;
+}
+
+
+nav a{
+    text-decoration: none;
+    font-family: 'Manrope' , sans-serif;
+    color:black;
+    font-size:18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    position:relative;
+}
+
+nav a:hover{
+    color:rgb(13, 156, 156);
+}
+
+nav a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0%; 
+    height: 3px;
+    background-color: rgb(1, 39, 39);
+    transition: width .5s ease; 
+
+}
+nav a:hover::before{
+    width:100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.navbar{
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1000; 
+    background-color: rgba(255, 255, 255, 0.9); 
+ 
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-links li{
+  margin: 0 30px;
+  text-align: center;
+
+}
+.menu-button{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    width:5vh;
+    cursor: pointer;
+    display:none;
+}
+
+#mission {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: black;
+    text-align: center; 
+}
+
+#mission img {
+    height: auto;
+    width: 100%; 
+    max-width: 420px; 
+    margin-bottom: 20px; 
+}
+
+.info {
+    width: 100%; 
+    max-width: 550px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.sec {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+#mission h1 {
+    font-size: 3em; 
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+#mission p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: white;
+    margin: 20px 0;
+}
+
+
+
+
+#about {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: black;
+    text-align: center; 
+}
+
+#about img {
+    height: auto;
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 20px; 
+}
+
+#about p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: white;
+    margin: 20px 0;
+}
+
+#about h1 {
+    font-size: 3em; 
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color:white;
+}
+
+
+
+#consultation h1{
+    padding-top: 60px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#consultation .line{
+    background-color: black;
+}
+
+#consultation h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.options {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+    margin-left: 5px;
+    align-items: center; 
+}
+
+.resource {
+    width: 100%; 
+    max-width: 600px; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.resource img {
+    max-width: 100%; 
+    height: auto; 
+    transition: transform 0.3s ease;
+    
+}
+
+.resource p {
+    text-align: center;
+    padding: 10px 20px; 
+
+}
+
+.resource h3 {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.resource img:hover {
+    transform: scale(1.2); /* Add scale effect */
+}
+
+#faq {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#faq h1{
+    padding-bottom: 10px;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #005b5b;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #008080;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.faq-icon {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; 
+}
+
+footer{
+    background-color: grey;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 70px 30px 20px; 
+}
+
+.footer-container h1{
+    display: flex;
+    justify-content: center;
+    font-size: 4vmin;
+    margin-bottom: 5px;
+}
+
+.footer-container p{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+.social a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.social a i{
+   font-size: 1em;
+   color:black;
+   opacity: 0.9;
+}
+
+.social a:hover{
+    background-color: grey;
+    transition: 0.5s;
+}
+@media only screen and (max-width: 960px){
+     
+    .menu-button{
+        display: block;
+        color: black;
+    }
+    .logo{
+        display: none;
+    }
+    .navbar{
+        padding: 0;
+        background-color: rgba(0, 19, 19, 0.9); 
+    }
+    .logo{
+        position: absolute;
+        top: 30px; 
+        left: 30px;
+        
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.4); 
+        opacity: 0.9;
+        margin-top:-1500px;
+        transition: all 0.7s ease;
+    }
+   
+    .mobile-menu{
+        margin-top: 0px;
+    }
+
+    .nav-links li{
+    margin: 30px auto; 
+    font-weight: bold;
+    font-size: 24px; 
+    }
+    .nav-links li a{
+        font-size: 40px;
+    }
+    #mission h1{
+        font-size: 2.5em;
+    }
+
+    #mission p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        color: white;
+        margin: 20px 0;
+    }
+    #about h1{
+        font-size: 2.5em; 
+    }
+
+    #about p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        color: white;
+        margin: 20px 0;
+    }
+
+    #consultation h1{
+        font-size: 2.5em;
+    }
+    #consultation h3{
+        font-size: 1.5em;
+    }
+
+}
+
+@media only screen and (max-width: 850px){
+
+    #mission h1 {
+        font-size: 2.5em; 
+    }
+
+    #mission p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        color: white;
+        margin: 20px 0;
+    }
+
+    .sec {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0 20px; 
+    }
+
+    .info {
+        margin-top: 20px; 
+    }
+
+    #about p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        color: white;
+        margin: 20px 0;
+    }
+
+    #about h1{
+        font-size: 2.5em; 
+    }
+
+    #consultation h1{
+        font-size: 2.5em;
+    }
+
+    #consultation h3{
+        font-size: 1.5em;
+    }
+    .menu-button{
+        display: block;
+        color: black;
+    }
+    .logo{
+        display: none;
+    }
+    .navbar{
+        padding: 0;
+        background-color: rgba(0, 19, 19, 0.9); 
+    }
+    .logo{
+        position: absolute;
+        top: 30px; 
+        left: 30px;
+        
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.4); 
+        opacity: 0.9;
+        margin-top:-1500px;
+        transition: all 0.7s ease;
+    }
+   
+    .mobile-menu{
+        margin-top: 0px;
+    }
+
+    .nav-links li{
+    margin: 30px auto; 
+    font-weight: bold;
+    }
+    .nav-links li a{
+      font-size: 40px;
+    }
+    .footer-container h1{
+        font-size: 4vw;
+    }
+
+    @media (max-width: 768px) {
+        .responsive-background {
+          background-position: top; 
+          height: 50vh; 
+        }
+      }
+}
+
